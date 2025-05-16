@@ -6,27 +6,8 @@ require("dotenv").config({path: path.resolve(__dirname, ".env")});
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const portNumber = 5000;
-app.listen(portNumber, () => {console.log(`Server running on port ${portNumber}`);});
-console.log(`Web server started and running at http://localhost:${portNumber}`);
-process.stdout.write("Type stop to shutdown the server: ");
+app.listen(portNumber, () => {console.log(`Server running on http://localhost:${portNumber}`);});
 process.stdin.setEncoding("utf8");
-
-process.stdin.on("readable", () => {
-    const dataInput = process.stdin.read();
-    if (dataInput !== null) {
-        const command = dataInput.trim();
-        if (command === "stop") {
-            async () => { await client.close(); }
-            console.log("Shutting down the server");
-            process.exit(0);
-        } else {
-            console.log(`Invalid command: ${command}`);
-        }
-    }
-
-    process.stdout.write("Stop to shutdown the server: ");
-    process.stdin.resume();
-});
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, "templates"));
