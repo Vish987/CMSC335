@@ -1,0 +1,30 @@
+body {
+	background-color: lightsteelblue;
+	font-family: 'Roboto';
+	margin: 1rem;
+}
+
+p {
+	color: red;
+	font-size: 1rem;
+}
+
+form {
+	display: inline;
+}
+
+input, select, button {
+	margin: 10px;
+}
+
+table, th, td {
+	border: 1px solid;
+}
+
+th, td {
+	padding: 10px;
+}
+
+#title {
+	color: green;
+}

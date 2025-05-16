@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Transaction</title>
+	<link rel="stylesheet" href="/style.css" type="text/css">
+  	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<h1>Add Transaction</h1>
+
+	<form action="http://localhost:5000/add" method="post">
+		<strong>Description: </strong><input type="text" name="description" required><br>
+		<strong>Amount: </strong><input type="number" name="amount" step="0.01" min="0.01" required><br>
+
+		<strong>Select Currency: </strong>
+		<select name="currency" size="1">
+			<option value="USD">USD</option>
+			<option value="CAD">CAD</option>
+			<option value="EUR">EUR</option>
+			<option value="GBP">GBP</option>
+			<option value="INR">INR</option>
+		</select><br>
+
+		<strong>Type: </strong>
+		<select name="type" size="1">
+			<option value="Expense">Expense</option>
+			<option value="Income">Income</option>
+		</select>
+
+		<br>
+		<button type="submit">Confirm</button>
+	</form>
+
+	<form action="/" method="get">
+    	<button type="submit">Back to Dashboard</button>
+	</form>
+</body>
+
+</html>

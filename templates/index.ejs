@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Dashboard</title>
+	<link rel="stylesheet" href="/style.css" type="text/css">
+  	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<h1 id="title">Personal Finance Dashboard</h1>
+
+	<h2>Balance: $<%= balance %></h2>
+
+	<h2>Transactions</h2>
+    <%- table %>
+
+	<br>
+	<form action="/add" method="get">
+        <button type="submit">Add Transaction</button>
+    </form>
+
+    <form action="/reset" method="post" onsubmit="return confirm('Are you sure you want to remove all transactions?')">
+        <button type="submit">Remove Transactions</button>
+    </form>
+</body>
+
+</html>
