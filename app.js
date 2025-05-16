@@ -6,7 +6,7 @@ require("dotenv").config({path: path.resolve(__dirname, ".env")});
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
 const portNumber = 5000;
-app.listen(portNumber, () => {console.log(`Server running on port ${port}`);});
+app.listen(portNumber, () => {console.log(`Server running on port ${portNumber}`);});
 console.log(`Web server started and running at http://localhost:${portNumber}`);
 process.stdout.write("Type stop to shutdown the server: ");
 process.stdin.setEncoding("utf8");
